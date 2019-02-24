@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Infuluectionmap</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Influection Map</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/navbar' %>
+
+    <div class="container">
+    <%= render 'layouts/flash_messages' %>
+    <div class="row" style="padding:15px 0 0 0">
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">MENU</div>
+                
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href=""><i class="glyphicon glyphicon-home"></i> HOME </a></li>
+                    <li><a href=""><i class="glyphicon glyphicon-pencil"></i> REPORT </a></li>
+                    <li><a href=""><i class="glyphicon glyphicon-map-marker"></i> PLACE </a></li>
+                    <li><a href=""><i class="glyphicon glyphicon-signal"></i> RANKING </a></li>
+                    <li><a href=""><i class="glyphicon glyphicon-user"></i> USER </a></li>
+                    <li><a href=""><i class="glyphicon glyphicon-question-sign"></i> ABOUT </a></li>
+                    <li><a href=""><i class="glyphicon glyphicon-envelope"></i> CONTACT </a></li>
+                </ul> 
+        
+            </div>
+        </div>
+        
+        <div class="col-md-9">
+          <%= yield %>
+        </div>
+      
+    </div>
   </body>
 </html>
