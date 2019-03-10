@@ -1,19 +1,15 @@
-<h1 style="margin-bottom:40px;">TIMELINE</h1>
-
-<p style="margin-bottom:20px; border-left : solid 3px #809ece;"><b>愛知県内の現在のインフルエンザ感染報告の一覧です。</b></p>
-
 <table class="table table-bordered">
     <thead>
         <tr class="info">
-            <th class="text-center col-md-1">日付</th>
-            <th class="text-center col-md-2">地域</th>
-            <th class="text-center col-md-1">感染人数</th>
-            <th class="text-center col-md-4">コメント</th>
-            <th class="text-center col-md-1"></th>
+            <th class="text-center col-xs-1">日付</th>
+            <th class="text-center col-xs-2">地域</th>
+            <th class="text-center col-xs-1">感染人数</th>
+            <th class="text-center col-xs-4">コメント</th>
+            <th class="text-center col-xs-1"></th>
         </tr>
     </thead>
     <tbody>
-    	<% @reports.each do |report| %>
+    	<% reports.each do |report| %>
     		<tr>
     			<td><%= report.date %></td>
     			<td><%= report.place.area %></td>
@@ -30,7 +26,3 @@
     	<% end %>
     </tbody>
 </table>
-
-<%= paginate @reports %>
-
-  	

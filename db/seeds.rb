@@ -1,7 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Place.create(area: " 尾張西部 ", detail: " 一宮・津島・北名古屋・稲沢・あま・清須・岩倉・江南・愛西・弥富・豊山・大口・扶桑・蟹江・飛島・大治 " )
+Place.create(area: " 尾張東部 ", detail: " 名古屋・瀬戸・春日井・長久手・尾張旭・日進・豊明・小牧・東郷 ")
+Place.create(area: " 知多地域 ", detail: " 半田・常滑・東海・大府・東浦・知多・阿久比・南知多・美浜・武豊 ")
+Place.create(area: " 西三河北西部 ", detail: " 豊田市西部・みよし ")
+Place.create(area: " 西三河北東部 ", detail: " 豊田市東部 ")
+Place.create(area: " 東三河北部 ", detail: " 新城・設楽・東栄・豊根 ")
+Place.create(area: " 東三河南部 ", detail: " 豊橋・豊川・蒲郡・田原 ")

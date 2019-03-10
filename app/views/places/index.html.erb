@@ -1,0 +1,21 @@
+<h1 style="margin-bottom:40px"><b>感染地域詳細</b></h1>
+
+<p style="margin-bottom:40px; border-left: solid 3px #809ece;">選択地域のインフルエンザ感染報告のみが表示されます。</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr class="info">
+            <th class="text-center col-md-3">地域</th>
+            <th class="text-center col-md-9">該当地域</th>
+        </tr>
+    </thead>
+    
+  <tbody>
+  <% @places.each do |place| %>
+  <tr>
+    <td><%= link_to place.area, place_path(place) %></td>
+    <td><%= place.detail %></td>
+  <% end %>
+  </tr>
+</tbody>
+</table>

@@ -1,0 +1,12 @@
+<h1 style="margin-bottom : 50px;"><b>インフルエンザ感染注意ランキング</b></h1>
+
+<h4 style = "margin-bottom:20px; border-left : solid 3px #809ece;">愛知県内の合計感染人数：<%= @people_total %>人</h4>
+
+<ol>
+  <% @places.each do |place| %>
+  <h4><li><%= place.area %> : <%= place.reports.sum(:people) %>人</li></h4>
+  <% end %>
+</ol>
+
+
+

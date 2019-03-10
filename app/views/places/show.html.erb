@@ -1,0 +1,15 @@
+<h1 style="margin-bottom:40px"><%= @place.area %>の感染報告一覧</h1>
+
+<h3 style="border-left: solid 5px #809ece;"> 感染報告数：<%= @counts_reports %></h3>
+<p style="margin-bottom:40px;"><%= link_to "感染ランキングを見る",rankings_place_path %></p>
+
+<%= render "reports/area_reports", reports: @reports %>
+
+
+
+  <div style="float:right;">
+    <p style = "margin-bottom:5px;"><%= link_to "=>地域一覧に戻る",places_path %></p>
+    <p style = "margin-bottom:5px;"><%= link_to "=>感染報告を登録する",new_report_path %></p>
+    <p style = "margin-bottom:5px;"><%= link_to "=>感染報告一覧に戻る",root_path %></p>
+  </div>
+

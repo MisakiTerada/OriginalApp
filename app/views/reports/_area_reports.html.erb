@@ -1,0 +1,26 @@
+<table class="table table-bordered">
+    <thead>
+        <tr class="info">
+            <th class="text-center col-xs-1">日付</th>
+            <th class="text-center col-xs-1">感染人数</th>
+            <th class="text-center col-xs-4">コメント</th>
+            <th class="text-center col-xs-1"></th>
+        </tr>
+    </thead>
+    <tbody>
+    	<% reports.each do |report| %>
+    		<tr>
+    			<td><%= report.date %></td>
+    			<td><%= report.people %> 人</td>
+    			<td><%= report.content %></td>
+    			<td>
+    				<div>
+    					<% if current_user == report.user %>
+            		<%= link_to "Delete", report, method: :delete, data: { confirm: "削除してもよろしいですか？" }, class: 'btn btn-danger btn-xs' %>
+          		<% end %>
+    				</div>
+    			</td>
+    		</tr>
+    	<% end %>
+    </tbody>
+</table>

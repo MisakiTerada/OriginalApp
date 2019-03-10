@@ -22,25 +22,48 @@
     <div class="row" style="padding:15px 0 0 0">
         <div class="col-md-2">
             <div class="panel panel-default">
-                <div class="panel-heading">MENU</div>
+                <div class="panel-heading" style="background-color:#b0c4de">MENU</div>
                 
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href=""><i class="glyphicon glyphicon-home"></i> HOME </a></li>
-                    <li><a href=""><i class="glyphicon glyphicon-pencil"></i> REPORT </a></li>
-                    <li><a href=""><i class="glyphicon glyphicon-map-marker"></i> PLACE </a></li>
-                    <li><a href=""><i class="glyphicon glyphicon-signal"></i> RANKING </a></li>
-                    <li><a href=""><i class="glyphicon glyphicon-user"></i> USER </a></li>
-                    <li><a href=""><i class="glyphicon glyphicon-question-sign"></i> ABOUT </a></li>
-                    <li><a href=""><i class="glyphicon glyphicon-envelope"></i> CONTACT </a></li>
+                  
+                    <li><%= link_to " HOME", root_path, class: "glyphicon glyphicon-home" %></li>
+                    
+                    <% if logged_in? %>
+                    <li><%= link_to " REPORT", new_report_path, class: "glyphicon glyphicon-pencil" %></li>
+                    <% else %>
+                    <li><%= link_to " REPORT ", signup_path,class: "glyphicon glyphicon-pencil" %></li>
+                    <% end %>
+      
+                    <li><%= link_to " PLACE ", places_path,class: "glyphicon glyphicon-map-marker" %></li>
+                    
+                    <li><%= link_to " RANKING ", rankings_place_path,class: "glyphicon glyphicon-signal" %></li>
+                    
+                    <% if logged_in? %>
+                    <li><%= link_to " USER ", user_path(current_user),class: "glyphicon glyphicon-user" %></li>
+                    <% else %>
+                    <li><%= link_to " USER ", signup_path,class: "glyphicon glyphicon-user" %></li>
+                    <% end %>
+                    
+                    <li><%= link_to " ABOUT ", about_path, class: "glyphicon glyphicon-info-sign" %></li>
+                    
+                    <li><%= link_to " CONTACT ", contact_path, class: "glyphicon glyphicon-envelope" %></li>
                 </ul> 
         
             </div>
         </div>
         
-        <div class="col-md-9">
+        <div class="col-md-10">
+          
           <%= yield %>
+          
         </div>
-      
     </div>
+  </div>
+  
+    
+      <footer>
+        <small>&copy; 2019 Infuluection Map.</small>
+      </footer>
+    
   </body>
 </html>
