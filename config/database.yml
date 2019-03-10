@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: infuluectionmap_production
   username: infuluectionmap
   password: <%= ENV['INFULUECTIONMAP_DATABASE_PASSWORD'] %>
