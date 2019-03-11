@@ -3,5 +3,6 @@ Place.create(area: " 尾張東部 ", detail: " 名古屋・瀬戸・春日井・
 Place.create(area: " 知多地域 ", detail: " 半田・常滑・東海・大府・東浦・知多・阿久比・南知多・美浜・武豊 ")
 Place.create(area: " 西三河北西部 ", detail: " 豊田市西部・みよし ")
 Place.create(area: " 西三河北東部 ", detail: " 豊田市東部 ")
+Place.create(area: " 西三河南部 ", detail: " 岡崎・碧南・刈谷・安城・西尾・知立・高浜・幸田")
 Place.create(area: " 東三河北部 ", detail: " 新城・設楽・東栄・豊根 ")
 Place.create(area: " 東三河南部 ", detail: " 豊橋・豊川・蒲郡・田原 ")
