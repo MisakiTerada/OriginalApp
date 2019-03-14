@@ -1,6 +1,13 @@
 <h1 style="margin-bottom : 50px;"><b>インフルエンザ感染注意ランキング</b></h1>
 
+<img src="/images/Aichi.jpg" alt="Aichi's_Map">
+
 <h4 style = "margin-bottom:20px; border-left : solid 3px #809ece;">愛知県内の合計感染人数：<%= @people_total %>人</h4>
+
+<h5 style="border-left: solid 3px #809ece; margin-bottom:20px;">感染注意ランキング上位地域にお住いの方に限らず予防を忘れずに。</h5>
+
+<div style="margin-bottom:20px;"><%= link_to '>>予防法は？', about_path %></div>
+
 
 <ol>
   <% @places.each do |place| %>
