@@ -4,7 +4,7 @@ class User < ApplicationRecord
     validates :email, presence: true, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false }
-    validates :password_digest, presence: true, length: { minimum:8 }
+    validates :password_digest, presence: true
     
     has_secure_password
     
